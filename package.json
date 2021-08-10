@@ -1,5 +1,5 @@
 {
-  "name": "serialportplugin",
+  "name": "cordova-plugin-serial-port",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
