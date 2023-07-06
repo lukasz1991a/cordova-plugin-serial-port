@@ -1,3 +1,14 @@
+# instalacja
+
+cordova plugin add https://github.com/lukasz1991a/cordova-plugin-serial-port.git
+
+# co to
+Jest to przerobione repozytorium https://github.com/luckxiang/cordova-plugin-serial-port pod wiele serial portów
+
+```
+let serialPort = new cordova.plugins.SerialPortPlugin
+```
+
 # cordova-plugin-serial-port
 ionic3 基于cordova编写的安卓串口通信插件  ionic3 serial port plugins for android
 
@@ -30,7 +41,7 @@ config:
 
 example:
 ```
-cordova.plugins.SerialPortPlugin.openDevice([{dev:'/dev/ttyS0',baudrate:115200, flags:0, isHex:false}],
+serialPort.openDevice([{dev:'/dev/ttyS0',baudrate:115200, flags:0, isHex:false}],
     result=>alert(result),
     error=>alert(error));
 }
@@ -39,7 +50,7 @@ cordova.plugins.SerialPortPlugin.openDevice([{dev:'/dev/ttyS0',baudrate:115200, 
 #### closeDevice
 example:
 ```
-cordova.plugins.SerialPortPlugin.closeDevice(
+serialPort.closeDevice(
     result=>alert(result),
     error=>alert(error)
 );
@@ -49,7 +60,7 @@ cordova.plugins.SerialPortPlugin.closeDevice(
 #### read
 example:
 ```
-cordova.plugins.SerialPortPlugin.read(
+serialPort.read(
   res=> {
         console.log(res);
         alert(res);
@@ -62,7 +73,7 @@ cordova.plugins.SerialPortPlugin.read(
 #### write
 example:
 ```
-cordova.plugins.SerialPortPlugin.write('12345678900000000000000000000000123',
+serialPort.write('12345678900000000000000000000000123',
   res=> {
         console.log(res);
         alert(res);
@@ -81,7 +92,7 @@ param:
 
 example:
 ```
-cordova.plugins.SerialPortPlugin.sendDataAndWaitResponse('12345678900000000000000000000000123',1000,
+serialPort.sendDataAndWaitResponse('12345678900000000000000000000000123',1000,
   res=> {
         console.log(res);
         alert(res);
@@ -97,7 +108,7 @@ you can change the hexString | string  after openDevice
 
 example:
 ```
-cordova.plugins.SerialPortPlugin.setHex(true);
+serialPort.setHex(true);
 ```
 
 
