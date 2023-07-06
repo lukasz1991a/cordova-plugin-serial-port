@@ -1,7 +1,7 @@
-var exec = require('cordova/exec');
+let exec = require('cordova/exec');
 
 
-var SerialPort = class {
+module.exports = class {
 
     constructor() {
         exec((a) => this.activeConnectionNumber = (a - 1), null, "SerialPortPlugin", "create", []);
